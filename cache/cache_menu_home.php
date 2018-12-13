@@ -1,6 +1,6 @@
 <?php
 //该文件是系统自动生成的缓存文件，请勿修改
-//创建时间：2018-12-11 08:44:54
+//创建时间：2018-12-12 15:02:46
 
 if (!defined('IN_TOA')) {exit('Access Denied!');}
 
@@ -665,17 +665,6 @@ $_CACHE['menu_home'] = array (
     'menukey' => '',
     'keytable' => 'config_db',
   ),
-  25 => 
-  array (
-    'menuid' => '25',
-    'menuname' => '会议管理',
-    'menuurl' => 'admin.php?ac=conference&fileurl=administrative',
-    'fatherid' => '3',
-    'menutype' => '2',
-    'menunum' => '10',
-    'menukey' => '0',
-    'keytable' => '',
-  ),
   27 => 
   array (
     'menuid' => '27',
@@ -707,7 +696,7 @@ $_CACHE['menu_home'] = array (
     'menutype' => '2',
     'menunum' => '13',
     'menukey' => '0',
-    'keytable' => '',
+    'keytable' => 'dashiji',
   ),
   26 => 
   array (

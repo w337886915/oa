@@ -98,12 +98,10 @@ if($_GET['do']=='edit'){
 </html>
 <script src="/template/default/home/lib/js/jquery/jquery-1.8.2.min.js"></script>
 <script>
-  $(".select_one").click(function(){
+  $(".select_one").on('change',function(){
    $(this).closest('table').next().find('input[type=checkbox]').prop('checked',$(this).prop('checked'));
   });
   $(".TableContent input[type=checkbox]").on('change',function(){
-    $(this)closest('td').next().find('input[type=checkbox]').prop('checked',$(this).prop('checked'));
+    $(this).closest('td').next().find('input[type=checkbox]').prop('checked',$(this).prop('checked'));
   })
-
-
 </script>

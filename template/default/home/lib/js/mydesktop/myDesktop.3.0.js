@@ -1582,21 +1582,21 @@ myDesktop.startBtn={
 			},function(){
 			$(this).children(".childItem").hide();   
 			});
- 		
+
 		//单击打开窗口
-		$(".dragitem").on("click",function(event){
-							event.stopPropagation();	
-							var data=$(this).data("winAttrData");
-							    data.parentPanel="div.currDesktop";
-							myDesktop.myWindow.init(data);
- 							
-							//添加到状态栏
-							if(!$("#taskTab_"+data.windowsId).size()){
-							     myDesktop.taskBar.addTask(data.windowsId,data.windowTitle,data.iconSrc);
-							}
-							
-							$("#start_item").hide();
-			   });
+		$(".dragitem").on("click", function (event) {
+			event.stopPropagation();
+			var data = $(this).data("winAttrData");
+			data.parentPanel = "div.currDesktop";
+			myDesktop.myWindow.init(data);
+
+			//添加到状态栏
+			if (!$("#taskTab_" + data.windowsId).size()) {
+				myDesktop.taskBar.addTask(data.windowsId, data.windowTitle, data.iconSrc);
+			}
+
+			$("#start_item").hide();
+		});
 		
 		
 		//附加data数据
@@ -1633,19 +1633,22 @@ myDesktop.startBtn={
 								  event.stopPropagation();
  								  
 								  if($start_item.is(":hidden")){
-								  slideBar.css("z-index",800);	  
+								  slideBar.css("z-index",800);
+								  $start_item.css("z-index",900);
 								  $start_item.show();
 								  }else{
-								  slideBar.css("z-index",45);	  
+								  slideBar.css("z-index",45);
+								  $start_item.css("z-index",45);
 								  $start_item.hide();
 								  }
 								  
 								  })
 		.on("mousemove",function(event){
+								event.preventDefault();
 								event.stopPropagation(); 
 								 });
 		
-		$start_block.mousemove(function(event){event.preventDefault(); });
+		$start_block.mousemove(function(event){event.preventDefault(); event.stopPropagation(); });
 		
 		$("body").click(function(event){
  								 event.preventDefault(); 

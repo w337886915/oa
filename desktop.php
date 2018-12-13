@@ -27,6 +27,7 @@ if($homemanaleft==''){
 	$homemanaleft='"17","21","20","272","31","303",';
 	$db->query("update ".DB_TABLEPRE."user_view set homemanaleft='".$homemanaleft."' WHERE uid = ".$_USER->id." ");	
 }
+
 if($homemana==''){
 		$html='';
 		$s=1;
@@ -54,6 +55,7 @@ if($homemana==''){
 	$db->query("update ".DB_TABLEPRE."user_view set homemana='".substr($html, 0, -1)."' WHERE uid = ".$_USER->id." ");	
 	$homemana=substr($html, 0, -1);
 }
+
 //echo $homemana;
 //exit;
 include_once template.'desktop.php';
